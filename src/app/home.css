@@ -1,0 +1,88 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.text-container {
+  text-align: center;
+}
+
+.art-text-line1 {
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  animation: textGlow 2s ease-in-out infinite alternate;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  font-family: 'Arial', sans-serif;
+  line-height: 1;
+}
+
+.art-text-line2 {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  animation: textGlow 2s ease-in-out infinite alternate;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  font-family: 'Arial', sans-serif;
+  line-height: 1;
+  margin-top: 0.5rem;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  to {
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .art-text-line1 {
+    font-size: 2.5rem;
+  }
+  
+  .art-text-line2 {
+    font-size: 1.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .art-text-line1 {
+    font-size: 2rem;
+  }
+  
+  .art-text-line2 {
+    font-size: 1.2rem;
+    padding-right: 0.3rem;
+  }
+}
